@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #333; }
+
+.container-fluid {
+  background-color: #F3EFE4;
+  padding: 0; }
+
+.content {
+  background: #ffffff;
+  margin: 20px; }
+
+header.row {
+  background: #ffffff;
+  margin: 0; }
+
+.JumboTron {
+  background: url("../img/Layer 14.png") no-repeat;
+  background-size: cover;
+  margin: 20px;
+  color: #ffffff;
+  padding: 20px; }
+  .JumboTron h1 {
+    margin: 20px;
+    margin-top: 10%; }
+  .JumboTron p {
+    margin: 20px;
+    width: 70%; }
+  .JumboTron .btn {
+    margin: 20px;
+    height: 40px;
+    width: 140px;
+    line-height: 30px; }
+
+.footer {
+  background: #757f3c;
+  margin: 0; }
+
+.about {
+  color: #cbb98a; }
+
+.blog {
+  background: #ffffff;
+  margin: 25px 65px 25px 65px; }
+
+.icon {
+  background: #494F29; }
+  .icon i {
+    color: #fff; }
+
+.media {
+  border-bottom: 2px solid #DADADA;
+  padding: 20px;
+  margin: 20px; }
+
+.media:last-child {
+  border: none; }
