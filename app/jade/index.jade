@@ -11,29 +11,35 @@ html(lang='ru')
         link(rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.min.css")
         link(rel="stylesheet" href="css/main.css")
         link(rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css")
-
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css')
         title test-task
     body
         .container-fluid
             header.row
-                .col-xs-2.col-sm-2.col-md-2.col-lg-2
+                .col-xs-12.col-sm-12.col-md-2.col-lg-2.log
                     img.logo(src="img/Logo.png")
-                .col-xs-10.col-sm-10.col-md-10.col-lg-10
-                    .row
+                .col-xs-12.col-sm-12.col-md-10.col-lg-10
+                    .row.top-header
 
-                        .col-xs-6.col-sm-6.col-md-6.col-lg-6.about
+                        .col-xs-12.col-sm-7.col-md-6.col-lg-6.about
                             img(src="img/Truck.png")
-                            span FREE SHIPING ON ALL ORDERS EXTENDED TO JULI 31
+                            span  FREE SHIPING ON ALL ORDERS EXTENDED TO JULI 31
 
 
-                        .col-xs-4.col-sm-4.col-md-4.col-lg-4 My Account | Track Order | Wishlist | Sign Out
+                        .col-xs-12.col-sm-5.col-md-4.col-lg-4 My Account | Track Order | Wishlist | Sign Out
 
                     .row
-                        .col-xs-6.col-sm-6.col-md-6.col-lg-6
+                        .col-xs-12.col-sm-7.col-md-6.col-lg-6
+
                             | Products | Buyer'sGuide | Blog | Your CartI
-                            span (4)
-                        .col-xs-4.col-sm-4.col-md-4.col-lg-4
-                            input.form-control(type="text"  placeholder="Search")
+                            span.red (4)
+                        .col-xs-12.col-sm-5.col-md-4.col-lg-4
+                            //input.form-control(type="text"  placeholder="Search Costgro")
+                            b
+                                .input-group
+                                    input.form-control(type="text" placeholder="Search Costgro" aria-describedby="basic-addon2")
+                                    span.input-group-addon.glyphicon.glyphicon-search
 
 
 
@@ -44,85 +50,196 @@ html(lang='ru')
                     .col-xs-12.col-sm-12.col-md-12.col-lg-12
 
                         .JumboTron
-                            h1 LATEST BLOG POST
+                            h1
+                                b Latest Blog Post
                             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             .btn.btn-warning MAIN BUTTON
                 .row
-                    .col-xs-3.col-sm-3.col-md-3.col-lg-3
-                        h3 CATEGORIES
-                        ul.nav.nav-stacked(role="tablist")
-                            li.active
-                                a(href="#") Categori 1
-                            li
-                                a(href="#") Categori 2
-                            li
-                                a(href="#") Categori 3
+                    .col-xs-12.col-sm-12.hidden-lg.hidden-md.visible-xs.visible-sm.top-menu
+                        b
+                            ul.nav.navbar-nav
+                                li.dropdown
+                                    a.dropdown-toggle(data-toggle="dropdown" href="#") CATEGORIES
+                                        span.caret
+                                    ul.dropdown-menu(role="menu")
+                                        li
+                                            a(href="#") Categori 1
+                                        li
+                                            a(href="#") Categori 2
+                                        li
+                                            a(href="#") Categori 3
+                                li.dropdown
+                                    a.dropdown-toggle(data-toggle="dropdown" href="#") ARCHIVES
+                                        span.caret
+                                    ul.dropdown-menu(role="menu")
+                                        li
+                                            a(href="#") July 2013
+                                        li
+                                            a(href="#") June 2013
+                                        li
+                                            a(href="#") May 2013
+                                li.hidden-xs
+                                    .input-group
+                                        input.form-control(type="text" placeholder="Enter Your Email" aria-describedby="basic-addon2")
+                                        span.input-group-addon.glyphicon.glyphicon-envelope
 
-                        h3 ARCHIVES
-                        ul.nav.nav-stacked(role="tablist")
-                            li.active
-                                a(href="#") July 2013
-                            li
-                                a(href="#") June 2013
-                            li
-                                a(href="#") May 2013
-                        h3 FOLLOW US
-                        ul.nav.nav-stacked(role="tablist")
-                            li.active
-                                a(href="#")
-                                    i.fa.fa-facebook(aria-hidden="true")
-                                    | Facebook
-                            li
-                                a(href="#")
-                                    i.fa.fa-pinterest
-                                    | Pinterest
-                            li
-                                a(href="#")
-                                    span.icon
+                    .col-xs-3.col-sm-3.col-md-3.col-lg-3.navigate.left-menu.hidden-xs.hidden-sm
+                        b
+                            h2
+                                b CATEGORIES
+                            ul.nav.nav-stacked(role="tablist")
+                                li.active
+                                    a(href="#") Categori 1
+                                li
+                                    a(href="#") Categori 2
+                                li
+                                    a(href="#") Categori 3
+
+                            h2
+                                b ARCHIVES
+                            ul.nav.nav-stacked(role="tablist")
+                                li.active
+                                    a(href="#") July 2013
+                                li
+                                    a(href="#") June 2013
+                                li
+                                    a(href="#") May 2013
+                            h2
+                                b FOLLOW US
+                            ul.nav.nav-stacked(role="tablist")
+                                li.active
+                                    a(href="#")
+                                        i.fa.fa-facebook(aria-hidden="true")
+                                        | &nbsp; Facebook
+                                li
+                                    a(href="#")
+                                        i.fa.fa-pinterest
+                                        | &nbsp; Pinterest
+                                li
+                                    a(href="#")
                                         i.fa.fa-instagram
-                                    | Instasgram
-                            li
-                                a(href="#")
-                                    i.fa.fa-twitter
-                                    | Twitter
-                            li
-                                a(href="#")
-                                    i.fa.fa-rss
-                                    | RSS Feed
-                            h3 JOIN NEWSLETTER
-                            input.form-control(type="text")
+                                        | &nbsp; Instasgram
+                                li
+                                    a(href="#")
+                                        i.fa.fa-twitter
+                                        | &nbsp; Twitter
+                                li
+                                    a(href="#")
+                                        i.fa.fa-rss
+                                        | &nbsp; RSS Feed
+                                h3
+                                    b JOIN NEWSLETTER
+                                .input-group
+                                    input.form-control(type="text" placeholder="Enter Your Email" aria-describedby="basic-addon2")
+                                    span.input-group-addon.glyphicon.glyphicon-envelope
 
-                    .col-xs-9.col-sm-9.col-md-9.col-lg-9
+                    .col-xs-12.col-sm-12.col-md-9.col-lg-9
                         .main
-                            h3 LATEST POST
+                            h3
+                                b LATEST POST
                             .media
                                 .media-left.media-middle
                                     img.media-object(src="img/Layer 22.png")
                                 .media-body
-                                    h4.media-heading Middle aligned media
-                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    h4.media-heading New Laws In Washington
+                                    p.data
+                                        i.fa.fa-clock-o &nbsp;
+                                        | &nbsp;July 12, 2013 &nbsp;
+                                        i.fa.fa-user &nbsp;
+                                        | &nbsp;Joe Shmoe
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        | ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        | laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        | voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                        | non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...
+                                        a.more Read More
                             .media
                                 .media-left.media-middle
                                     img.media-object(src="img/Layer 22.png")
                                 .media-body
-                                    h4.media-heading Middle aligned media
-                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    h4.media-heading New Laws In Washington
+                                    p.data
+                                        i.fa.fa-clock-o &nbsp;
+                                        | &nbsp;July 12, 2013 &nbsp;
+                                        i.fa.fa-user &nbsp;
+                                        | &nbsp;Joe Shmoe
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        | ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        | laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        |voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                        |non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...
+                                        a.more Read More
                             .media
                                 .media-left.media-middle
                                     img.media-object(src="img/Layer 22.png")
-                                .media-body
-                                    h4.media-heading Middle aligned media
-                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+                                .media-body
+                                    h4.media-heading New Laws In Washington
+                                    p.data
+                                        i.fa.fa-clock-o &nbsp;
+                                        | &nbsp;July 12, 2013 &nbsp;
+                                        i.fa.fa-user &nbsp;
+                                        | &nbsp;Joe Shmoe
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        | ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        | laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        | voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                        | non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...
+                                        a.more Read More
 
 
     footer.row.footer
         .col-xs-3.col-sm-3.col-md-3.col-lg-3
-            h5 CUSTOMER SERVICE
+            h5
+                b CUSTOMER SERVICE
+            ul.footer_list
+                li Track Order
+                li Shipping Policy
+                li No-Hassle Return Policy
+                li FAQ
+                li Company Info
+                li Customer Testimonials
+                li Privacy Policy
+                li Sitemap
         .col-xs-6col-sm-6.col-md-6.col-lg-6
-            h5 SHOP COSTGRO
+
+            h5
+                b SHOP COSTGRO
+            ul.footer_list
+                li Air/HVAC
+                li & Meters
+                li Grow Media
+                li Grow System
+                li Grow Tents
+                li Lighting
+                li Nutrients
+                li Pest & Disease Control
+             ul.footer_list.end_list
+                li pH/TDS Solutions
+                li & Meters
+                li Posts & Containers
+                li Propagation
+                li Tools & Accessories
+                li Grow Trays, Reservoirs
+                li & Stands
+                li Water
+
         .col-xs-3.col-sm-3.col-md-3.col-lg-3
-            h5 FOLLOW COSTGRO
+            h5
+                b FOLLOW COSTGRO
+            ul.footer_list
+                li Facebook
+                li Pinterest
+                li Instagram
+                li Twitter
+            h5.search
+                b SEARCH COSTGRO
+            b
+                .input-group
+                    input.form-control(type="text" placeholder="Search Costgro" aria-describedby="basic-addon2")
+                    span.input-group-addon.glyphicon.glyphicon-search
 
 
+
+    script(src="bower/jquery/dist/jquery.min.js" type="text/javascript")
     script(src="bower/bootstrap/dist/js/bootstrap.min.js" type="text/javascript")

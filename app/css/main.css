@@ -1,3 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:600);
+@import url(https://fonts.googleapis.com/css?family=Cardo:400italic);
+@import url(./components/header.scss);
+@import url(./components/footer.scss);
+@import url(./components/nav.scss);
+@import url(./components/blog.scss);
+@media (max-width: 1115px) {
+  .log {
+    text-align: center; }
+  header.row {
+    padding: 5px 10px !important;
+    text-align: center;
+    align-content: center; }
+    header.row .end_list {
+      margin-left: 50px !important; } }
+
+@media (max-width: 800px) {
+  .end_list.footer_list {
+    margin-left: 20px; }
+  header.row .input-group {
+    display: none; }
+  section.row.blog {
+    margin: 10px 20px !important; } }
+
 * {
   margin: 0;
   padding: 0; }
@@ -17,14 +42,13 @@
   background: #ffffff;
   margin: 20px; }
 
-header.row {
-  background: #ffffff;
+.top-menu {
+  color: #a3a78b;
   margin: 0; }
 
 .JumboTron {
   background: url("../img/Layer 14.png") no-repeat;
   background-size: cover;
-  margin: 20px;
   color: #ffffff;
   padding: 20px; }
   .JumboTron h1 {
@@ -37,28 +61,74 @@ header.row {
     margin: 20px;
     height: 40px;
     width: 140px;
-    line-height: 30px; }
+    line-height: 30px;
+    background: #e8930c;
+    font-size: 11px; }
 
-.footer {
-  background: #757f3c;
-  margin: 0; }
+h3 {
+  font-size: 14px;
+  color: #a3a78b; }
 
-.about {
-  color: #cbb98a; }
+h5 {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+  -webkit-box-shadow: 0px 3px 3px -4px rgba(250, 237, 250, 0.95);
+  -moz-box-shadow: 0px 3px 3px -4px rgba(250, 237, 250, 0.95);
+  box-shadow: 0px 3px 3px -4px rgba(250, 237, 250, 0.95); }
+
+a {
+  padding: 5px 0 !important; }
+
+h5.search {
+  margin-top: 120px; }
 
 .blog {
   background: #ffffff;
-  margin: 25px 65px 25px 65px; }
+  margin: 25px 65px 25px 65px;
+  border: 1px solid #e4ded1;
+  padding: 20px; }
 
-.icon {
-  background: #494F29; }
-  .icon i {
-    color: #fff; }
+.media-middle {
+  vertical-align: top;
+  float: left; }
 
 .media {
   border-bottom: 2px solid #DADADA;
   padding: 20px;
-  margin: 20px; }
+  margin: 20px;
+  color: #5b5b5b;
+  font-family: 'Lucida Grande', sans-serif;
+  font-size: 12pt; }
+
+.more {
+  color: #e8930c;
+  cursor: pointer; }
+  .more:hover {
+    text-decoration: none;
+    color: #bc770a; }
 
 .media:last-child {
   border: none; }
+
+.media-heading {
+  color: #e8930c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px; }
+
+p.data {
+  color: #828282;
+  font-size: 12pt;
+  font-family: 'Cardo', serif; }
+
+.footer {
+  background: #757f3c;
+  margin: 0;
+  padding: 30px; }
+
+.footer_list {
+  color: #fff;
+  list-style: none;
+  float: left; }
+
+.end_list {
+  margin-left: 200px; }

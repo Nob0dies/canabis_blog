@@ -1,3 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:600);
+@import url(https://fonts.googleapis.com/css?family=Cardo:400italic);
+
+@media (max-width: 1115px){
+.log{
+  text-align: center;
+ }
+  header.row{
+  padding: 5px 10px !important;
+    text-align: center;
+    align-content: center;
+    .end_list{
+      margin-left: 50px !important;}
+
+
+  }
+
+}
+@media (max-width: 800px){
+  .end_list.footer_list{
+    margin-left: 20px;}
+
+  header.row{
+
+    & .input-group{
+      display: none;
+    }
+  }
+  section.row.blog{
+    margin: 10px 20px !important;
+
+  }
+
+}
+$orange: #e8930c;
+$padding: 20px;
+$pastel: #c4b07a;
+$border: #e4ded1;
+$white: #ffffff;
+$green: #3b401e;
+$fon: #f3efe4;
+$grey: #a3a78b;
+
 *{
   margin: 0;
   padding: 0;
@@ -17,21 +61,135 @@
 
 }
 .content{
-  background: #ffffff;
+  background: $white;
   margin: 20px;
 }
 
 
-header.row{
-  background: #ffffff;
+
+.top-menu{
+  color: $grey;
   margin: 0;
 }
+
+//header
+.top-header{
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+header.row{
+  background: $white;
+  margin: 0;
+  border-bottom: 1px solid $border;
+  padding: 5px 5px 5px 60px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: $green;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.form-control{
+  background: $fon;
+  color: $green;
+  font-family: "Cardo", serif;
+  border: none;
+  box-shadow: none;
+  //height: 25px;
+  &::-webkit-input-placeholder {
+    color: $green !important;
+  }
+  &:-moz-placeholder {
+    color: $green !important;
+  }
+}
+.about{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9pt;
+  color: $pastel;
+}
+
+//header end
+
+
+
+//navigate
+.red{
+ color: $orange;
+}
+.input-group-addon{
+  color: $green;
+  height: 25px;
+  border: none;
+  background: $fon;
+  top: 0px;
+}
+.input-group{
+  width: 200px;
+}
+
+
+
+
+.dropdown-toggle{
+  font-size: 14px;
+  color: $grey !important;
+
+
+  & :hover{
+    color: $grey !important;
+  }
+  & :active{
+    color: $grey !important;
+  }
+}
+
+
+ul.nav.navbar-nav li{
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+
+
+h2 {
+  font-size: 14px;
+  color: $grey;
+
+}
+.nav a{
+  color: $green !important;
+  font-size: 12px;
+  margin: 0;
+
+  &:hover{
+    color: #94a14c !important;
+    background: none !important;
+    text-decoration: underline !important;
+  }
+  & :active {
+    color: #94a14c !important;
+    background: none !important;
+    text-decoration: underline !important;
+  }
+}
+.navigate{
+  padding-right: 0;
+  padding-left: 50px;
+}
+
+.fa-rss{
+  color: $orange;
+}
+//navigate end
+
+
+
 .JumboTron{
   background: url("../img/Layer 14.png") no-repeat;
   background-size: cover;
-  margin: 20px;
   color: #ffffff;
-  padding: 20px;
+  padding: $padding;
   & h1{
     margin : 20px;
     margin-top: 10%;
@@ -45,35 +203,95 @@ header.row{
     height: 40px;
     width: 140px;
     line-height: 30px;
+    background: $orange;
+    font-size: 11px;
   }
 
 }
 
-.footer{
-  background: #757f3c;
-  margin: 0;
+h3{
+  font-size: 14px;
+  color: $grey;
+
 }
 
-.about{
 
-  color: #cbb98a;
+h5{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+  -webkit-box-shadow: 0px 3px 3px -4px rgba(250,237,250,0.95);
+  -moz-box-shadow: 0px 3px 3px -4px rgba(250,237,250,0.95);
+  box-shadow: 0px 3px 3px -4px rgba(250,237,250,0.95);
+
+
 }
+a{
+  padding: 5px 0 !important;
+}
+h5.search{
+  margin-top: 120px;
+}
+
+
+
+
+//blog
 
 .blog{
   background: #ffffff;
   margin: 25px 65px 25px 65px;
+  border: 1px solid $border;
+  padding: 20px;
 }
-.icon{
-  background: #494F29;
-  & i{
-    color: #fff;
-  }
+.media-middle{
+  vertical-align: top;
+  float: left;
 }
 .media{
   border-bottom: 2px solid #DADADA;
   padding: 20px;
   margin: 20px;
+  color: #5b5b5b;
+  font-family: 'Lucida Grande', sans-serif;
+  font-size: 12pt;
+}
+.more{
+  color: $orange;
+  cursor: pointer;
+  &:hover{
+    text-decoration: none;
+    color: darken($orange, 9%)
+
+  }
 }
 .media:last-child{
   border: none;
+}
+.media-heading{
+  color: $orange;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+}
+
+p.data{
+  color: #828282;
+  font-size: 12pt;
+  font-family:  'Cardo', serif ;
+}
+//blog end
+
+
+//footer
+.footer{
+  background: #757f3c;
+  margin: 0;
+  padding: 30px;
+}
+.footer_list{
+  color: #fff;
+  list-style: none;
+  float: left;
+}
+.end_list{
+  margin-left: 200px;
 }
